@@ -1,0 +1,38 @@
+//////////////////////////////////
+//Deep Datta Roy
+//Phil Johnson
+//
+//Dissemination barrier using MPI
+//////////////////////////////////
+#ifndef _DISSEMINATION
+
+#include <stdlib.h>
+#include <math.h>
+#include <malloc.h>
+#include <mpi.h>
+
+//////////////////////////FUNCTION PROTOTYPES//////////////////////////
+
+//////////////////////////////////
+//barrierMPI_init()
+//
+//parameters: 
+//	int barrierThreads - # threads
+//
+//return:
+//	none
+//////////////////////////////////
+void barrierMPI_init(int barrierThreads);
+
+//////////////////////////////////
+//barrierMPI()
+//
+//parameters: 
+//	none
+//
+//return:
+//	none
+//////////////////////////////////
+void barrierMPI();
+
+#endif
