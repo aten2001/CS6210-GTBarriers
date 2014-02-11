@@ -12,7 +12,7 @@ CFLAGS = -I$(MPICH)/include
 
 all: test
 
-test: test.o
+test: test.o dissemination.o
 	$(MPICC) -o $@ $(LDFLAGS) $^ $(LDLIBS)
 
 clean:
