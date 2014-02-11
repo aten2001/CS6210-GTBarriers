@@ -5,8 +5,16 @@ OpenMP
 Dissemination
 MCS
 
-MPI
+MPI (http://particlephysicsandcode.com/2012/11/04/installing-open-mpi-1-6-3-ubuntu-12-04-fedora/)
 ----
+Dissemination
+Tournament
 
 Combined
 ---------
+
+
+Things to Figure out
+------------------
+ln 43 in dissemination -> needed?
+MPI -> fprintf sometimes out of order, but seems like actually in order when comparing data within the barrier itself (due to multiple processors?)

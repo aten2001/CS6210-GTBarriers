@@ -40,6 +40,7 @@ void barrier(){
 	//Do the rounds
 	for (i = 0; i < rounds; i++){
 		sendID = (myID + (int)pow(2,i))%numThreads;			//Figure out who to send message
+		while(messageArray[i][sendID] == MESSAGE);
 		messageArray[i][sendID] = MESSAGE;				//send message
 		//if haven;t recieved message yet, loop
 		while(messageArray[i][myID] == NO_MESSAGE);

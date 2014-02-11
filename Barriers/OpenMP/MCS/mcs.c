@@ -87,12 +87,12 @@ void barrier(){
 			if (i==3){
 				childrenFlag = READY;
 
-			//Reset flags for ready
-			for (i = 0; i < 4 ;i++){
-				if (nodeArray[myID].childrenUp[i]!=NO_CHILD){
-					nodeArray[myID].childrenReady[i]=NOT_READY;
+				//Reset flags for ready
+				for (i = 0; i < 4 ;i++){
+					if (nodeArray[myID].childrenUp[i]!=NO_CHILD){
+						nodeArray[myID].childrenReady[i]=NOT_READY;
+					}
 				}
-			}
 
 			}
 		}

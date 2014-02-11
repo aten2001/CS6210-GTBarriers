@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "dissemination.h"
 
-#define NUM_THREADS 15
+#define NUM_THREADS 14
 
 
 int main(int argc, char **argv)
