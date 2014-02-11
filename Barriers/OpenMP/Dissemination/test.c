@@ -26,6 +26,17 @@ int main(int argc, char **argv)
 
   } // implied barrier
 
+#pragma omp parallel
+  {
+    // Now we're in the parallel section
+    int num_threads = omp_get_num_threads();
+    int thread_num = omp_get_thread_num();
+
+    printf("Hello World from thread %d of %d.\n", thread_num, num_threads);
+	barrier();
+    printf("Goodbye World from thread %d of %d.\n", thread_num, num_threads);
+
+  } // implied barrier
   // Resume serial code
   printf("Back in the serial section again\n");
 

@@ -43,5 +43,8 @@ void barrier(){
 		messageArray[i][sendID] = MESSAGE;				//send message
 		//if haven;t recieved message yet, loop
 		while(messageArray[i][myID] == NO_MESSAGE);
+		messageArray[i][myID] = NO_MESSAGE;			//reset
 	}
+
+
 }

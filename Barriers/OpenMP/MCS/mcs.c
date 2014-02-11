@@ -86,20 +86,29 @@ void barrier(){
 			//if all children ready, mark it
 			if (i==3){
 				childrenFlag = READY;
+
+			//Reset flags for ready
+			for (i = 0; i < 4 ;i++){
+				if (nodeArray[myID].childrenUp[i]!=NO_CHILD){
+					nodeArray[myID].childrenReady[i]=NOT_READY;
+				}
+			}
+
 			}
 		}
 	}
 
-
-#pragma omp critical
-{
 	//set ready in parent
 	if (nodeArray[myID].parent!=-1){
 		nodeArray[nodeArray[myID].parent].childrenReady[(myID-1)%4] = READY;
 	}		
-}
+
 	//Spin while wait for barrier release
 	while(nodeArray[myID].wake==NOT_READY);					
+	//Reset wake flag
+	if (nodeArray[myID].parent!=-1){
+		nodeArray[myID].wake=NOT_READY;
+	}
 
 	//Alert children that ready to release barrier
 	for (i = 0; i < 2 ;i++){
