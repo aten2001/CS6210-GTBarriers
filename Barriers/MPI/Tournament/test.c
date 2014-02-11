@@ -17,6 +17,9 @@ int main(int argc, char **argv)
 	barrier();
   	fprintf(stderr, "Goodbye World from processes %d of %d\n", my_id, num_processes);
   	
+	barrier();
+  	fprintf(stderr, "Hello World from processes %d of %d\n", my_id, num_processes);
+
 	MPI_Finalize();
 
   	return 0;

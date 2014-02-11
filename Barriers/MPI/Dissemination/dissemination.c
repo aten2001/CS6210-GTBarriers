@@ -14,6 +14,7 @@
 
 int numThreads;					//number of threads
 int rounds; 					//number of rounds
+int j = 0;
 
 /////////////////////////////////////////////////////////////////////
 
@@ -28,14 +29,19 @@ void barrier(){
 	int sendID, recvID;
 	int myID;
 	int recvMsg;
-	int sendMsg = MESSAGE;
+	int sendMsg = j++;
+	int *buffer = malloc(100 * sizeof(int));
+
+
+
 
   	MPI_Comm_rank(MPI_COMM_WORLD, &myID);	//Get ID
-	
-	//Do the rounds
+
+	//Do the rounds    
 	for (i = 0; i < rounds; i++){
 		//Send message to correct thread
 		sendID = (myID + (int)pow(2,i))%numThreads;
+
 		MPI_Send(&sendMsg, 1, MPI_INT, sendID, 0, MPI_COMM_WORLD);
 		//Recieve Message from correct threads
 		recvID = myID -  (int)pow(2,i);
@@ -44,6 +50,5 @@ void barrier(){
 		}
 		MPI_Recv(&recvMsg, 1, MPI_INT, recvID, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 	}
-
 
 }

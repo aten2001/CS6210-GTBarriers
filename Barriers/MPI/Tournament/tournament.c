@@ -43,6 +43,9 @@ void barrier(){
 			MPI_Recv(&recvMsg, 1, MPI_INT, recvID, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 		}else{
 			roundFactor=roundFactor*2;
+			if (myID!=0){
+				continue;			
+			}
 			break;		
 		}
 
@@ -53,7 +56,7 @@ void barrier(){
 
 	//Send notification to right thread
 	if (myID!=0){
-		sendID = myID - roundFactor/2;		  	
+		sendID = myID - roundFactor/2;	
 		MPI_Send(&sendMsg, 1, MPI_INT, sendID, 0, MPI_COMM_WORLD);
 	}
 

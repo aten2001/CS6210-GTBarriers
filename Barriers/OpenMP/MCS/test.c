@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "mcs.h"
 
-#define NUM_THREADS 10
+#define NUM_THREADS 16
 
 
 int main(int argc, char **argv)
