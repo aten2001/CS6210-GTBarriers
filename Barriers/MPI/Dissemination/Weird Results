@@ -1,0 +1,45 @@
+0-Hello World from processes 0 of 3
+Start Time:807125 - 0
+0-Hello World from processes 1 of 3
+Start Time:807125 - 1
+Sent:807128 from 1 to 2
+Recv:807128 from 0 to 1
+Sent:807168 from 1 to 0
+Sent:807128 from 0 to 1
+Recv:807142 from 2 to 0
+Sent:807167 from 0 to 2
+Recv:807168 from 1 to 0
+Leave Time:807170 - 0
+0-Goodbye World from processes 0 of 3
+Start Time:807171 - 0
+Sent:807171 from 0 to 1
+0-Hello World from processes 2 of 3
+Start Time:807140 - 2
+Sent:807142 from 2 to 0
+Recv:807128 from 1 to 2
+Sent:807173 from 2 to 1
+Recv:807167 from 0 to 2
+Leave Time:807176 - 2
+0-Goodbye World from processes 2 of 3
+Start Time:807177 - 2
+Sent:807177 from 2 to 0
+Recv:807178 from 1 to 2
+Sent:807179 from 2 to 1
+Recv:807178 from 0 to 2
+Leave Time:807182 - 2
+1-Hello World from processes 2 of 3
+Recv:807173 from 2 to 1
+Leave Time:807176 - 1
+0-Goodbye World from processes 1 of 3
+Start Time:807177 - 1
+Sent:807178 from 1 to 2
+Recv:807171 from 0 to 1
+Sent:807182 from 1 to 0
+Recv:807179 from 2 to 1
+Leave Time:807185 - 1
+1-Hello World from processes 1 of 3
+Recv:807177 from 2 to 0
+Sent:807178 from 0 to 2
+Recv:807182 from 1 to 0
+Leave Time:807183 - 0
+1-Hello World from processes 0 of 3

@@ -1,0 +1,22 @@
+Hello World from processes 0 of 3
+Start Time:691803 - 0
+Hello World from processes 1 of 3
+Start Time:691943 - 1
+Hello World from processes 2 of 3
+Start Time:691943 - 2
+Leave Time:692008 - 0
+Goodbye World from processes 0 of 3
+Start Time:692012 - 0
+Leave Time:692022 - 0
+Hello World from processes 0 of 3
+Leave Time:692012 - 2
+Goodbye World from processes 2 of 3
+Start Time:692018 - 2
+Leave Time:692024 - 2
+Hello World from processes 2 of 3
+Leave Time:692013 - 1
+Goodbye World from processes 1 of 3
+Start Time:692018 - 1
+Leave Time:692024 - 1
+Hello World from processes 1 of 3
+

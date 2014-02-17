@@ -29,9 +29,16 @@ void barrier(){
 	int recvMsg;
 	int sendMsg = MESSAGE;
 	int roundFactor = 2;
+struct timeval tv;
 
   	MPI_Comm_rank(MPI_COMM_WORLD, &myID);	//Get ID
 	
+//////////////////////////////////////
+gettimeofday(&tv,NULL);
+sendMsg = tv.tv_usec;
+fprintf(stderr, "Start Time:%d - %d\n", sendMsg, myID);
+//////////////////////////////////////
+
 	//check if supposed to be a winner
 	while ((myID%roundFactor)==0){
 
@@ -88,4 +95,10 @@ void barrier(){
 		//Change round factor so winner is different
 		roundFactor=roundFactor/2;
 	}
+
+//////////////////////////////////////
+gettimeofday(&tv,NULL);
+sendMsg = tv.tv_usec;
+fprintf(stderr, "Leave Time:%d - %d\n", sendMsg, myID);
+//////////////////////////////////////
 }
